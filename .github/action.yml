@@ -4,7 +4,7 @@ name: Workflow
 on: push
 jobs:
   first_job:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: welcome message
         run: echo "This is my runner"
@@ -12,4 +12,4 @@ jobs:
         run: ls
       - name: Read files
         run: cat README.md
-        
+
