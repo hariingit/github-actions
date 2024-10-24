@@ -9,9 +9,13 @@ jobs:
       - name: checkout v4
         uses: actions/checkout@v4.2.2
 
-      - name : list files
-        run: ls
+      - name : list and read files
+        run: |
+            ls -lta
+            echo "hi"
+            cat README.md
+      - name: Generate ASCII Artwork
+        run: cowsay -f dragon "Run for cover ,I am a dragon ...RAWR" >> dragon.txt
         
-      - name: Read files
-        run: cat README.md
+       
 
