@@ -6,10 +6,12 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: welcome message
-        run: echo "This is my runner"
+      - name: checkout v4
+        uses: actions/checkout@v4.2.2
+
       - name : list files
         run: ls
+        
       - name: Read files
         run: cat README.md
 
