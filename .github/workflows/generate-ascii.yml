@@ -12,9 +12,6 @@ jobs:
             - name: Install cowsay program
               run: sudo apt-get install cowsay -y
 
-            - name: Generate ASCII Artwork
-              run: cowsay -f dragon "Run for cover ,I am a dragon ...RAWR" >> dragon.txt
-
             - name: Sleep for 30 seconds
               run: sleep 30
     test_job1:
