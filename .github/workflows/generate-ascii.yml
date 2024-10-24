@@ -1,8 +1,7 @@
 name: Workflow
 
 #Trigger
-on: 
-    push
+on: push
 jobs:
     ascii_job:
         runs-on: ubuntu-latest
@@ -10,18 +9,8 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v4.2.2
 
-            - name: Install cowsay program
-              run: sudo apt-get install cowsay -y
-
-            - name: Generate ASCII Artwork
-              run: cowsay -f dragon "Run for cover ,I am a dragon ...RAWR" >> dragon.txt
-
-            - name: Test file exists
-              run: grep -i "dragon" dragon.txt
-
-            - name: Read file
-              run: cat dragon.txt
-            
-            - name: Checkout Repo files
+            - name: List Repo files
               run: ls -ltra
-
+            
+            - name: Executing shell script
+              run: ./ascii-script.sh
